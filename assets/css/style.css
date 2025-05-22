@@ -11,7 +11,7 @@
   /* background-size: cover;  */
   margin: -31px; 
   margin-left:-7px;
-  border: 6px solid rgba(0, 77, 64, 0.4); 
+  border: 6px solid #121212(0, 77, 64, 0.4); 
   border-radius: 50% !important;
 }
 
@@ -41,7 +41,7 @@
   width: 50px;
   height: 50px;
   border: 0;
-  color: #FFFFFF;
+  color: #121212;
   cursor: pointer;
   font-size: 30px;
   line-height: 70px;
@@ -55,20 +55,20 @@
 }
 
 .linkedin {
-  color: #0077b5;
+  color: whitesmoke;
 }
 
 .angellist {
-  color: grey;
+  color: #121212;
 }
 
 .icon-btn:hover {
   transform: scale(1.10);
-  color: #FFFFFF;
+  color: #121212;
 }
 
 .linkedin:hover {
-  background-color: #0077b5;
+  background-color: whitesmoke;
 }
 
 .angellist:hover {
@@ -76,7 +76,7 @@
 }
 
 .github:hover {
-  background-color: black;
+  background-color: whitesmoke;
 }
 
 /* Buttons - Read Me, Contact Us */
@@ -692,3 +692,4 @@ small {
     background-position-x: 30%;
   }
 }
+
