@@ -1,17 +1,14 @@
 .profile-pic {
   position: relative;
-  max-width:130px;
-  max-height:130px;
+  max-width: 130px;
+  max-height: 130px;
   width: auto;
   height: auto;
   overflow: hidden;
-  /* display: inline-block; */
-  
-  
-  /* background-size: cover;  */
-  margin: -31px; 
-  margin-left:-7px;
-  border: 6px solid #121212(0, 77, 64, 0.4); 
+  margin: -31px;
+  margin-left: -7px;
+  /* Changed: Border to be Teal */
+  border: 6px solid #26A69A;
   border-radius: 50% !important;
 }
 
@@ -21,10 +18,8 @@
 }
 
 .tracker {
-  /* visibility: hidden; */
   position: fixed;
-  /* margin-inline-end: auto;  */
-  bottom: 0; 
+  bottom: 0;
   right: 0;
 }
 
@@ -33,7 +28,6 @@
   margin: 0 auto;
   width: auto;
   text-align: inherit;
-  /* padding: 10px; */
 }
 
 .icon-btn {
@@ -41,7 +35,8 @@
   width: 50px;
   height: 50px;
   border: 0;
-  color: #121212;
+  /* Default for icons, overridden by specific rules below */
+  color: #26A69A;
   cursor: pointer;
   font-size: 30px;
   line-height: 70px;
@@ -50,33 +45,46 @@
   margin: 4px;
 }
 
+/* Specific icon colors */
 .github {
-  color: black;
+  /* Changed: GitHub icon default to dark blue/grey */
+  color: #424242;
 }
 
 .linkedin {
-  color: whitesmoke;
+  /* Changed: LinkedIn icon default to Teal */
+  color: #26A69A;
 }
 
 .angellist {
-  color: #121212;
+  /* Angellist remains Teal */
+  color: #26A69A;
 }
 
-.icon-btn:hover {
+/* Hover effects for specific icons */
+.github:hover {
   transform: scale(1.10);
-  color: #121212;
+  /* Changed: GitHub icon on hover to white */
+  color: #F5F5F5;
 }
 
 .linkedin:hover {
-  background-color: whitesmoke;
+  transform: scale(1.10);
+  /* Changed: LinkedIn icon on hover to Teal */
+  color: #26A69A;
 }
 
-.angellist:hover {
-  background-color: grey;
+/* General icon hover effects (primarily for background transparency) */
+.icon-btn:hover {
+  /* This general rule for color will be overridden by specific :hover rules above for github/linkedin */
+  transform: scale(1.10);
 }
 
+.linkedin:hover,
+.angellist:hover,
 .github:hover {
-  background-color: whitesmoke;
+  /* Consistent subtle teal background on hover for all social icons */
+  background-color: rgba(38, 166, 154, 0.2);
 }
 
 /* Buttons - Read Me, Contact Us */
@@ -84,9 +92,12 @@
 .readme {
   position: relative;
   padding: 11px 35px;
-  background: #fff;
-  color: #00796b;
-  border: 2px solid #fff;
+  /* Darker button background for dark theme */
+  background: #2C333D;
+  /* Bright blue text replaced with Teal */
+  color: #26A69A;
+  /* Bright blue border replaced with Teal */
+  border: 2px solid #26A69A;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 1px;
@@ -95,17 +106,14 @@
   -webkit-border-radius: 5px;
 }
 
-/* .readme:hover{
-  color: white;
-  background-color: #00796b;
-} */
-
 .contactme {
   position: relative;
   padding: 11px 35px;
   background: none;
-  color: #fff;
-  border: 2px solid #fff;
+  /* All text is Whitesmoke */
+  color: #F5F5F5;
+  /* Border to match whitesmoke text */
+  border: 2px solid #F5F5F5;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 1px;
@@ -115,48 +123,37 @@
   -webkit-border-radius: 5px;
 }
 
-.contactme:hover{
-  color: #00796b;
-  background-color: white;
+.contactme:hover {
+  /* Main dark background color on hover */
+  color: #1A202C;
+  /* Bright blue on hover replaced with Teal */
+  background-color: #26A69A;
 }
+
 /* main body */
 
-/* body-color */
-
 body {
-  color: #333;
+  /* All text is Whitesmoke */
+  color: #F5F5F5;
   font-size: 18px;
+  /* Main dark blue background */
+  background-color: #1A202C;
 }
-
-/* body {
-  color: black;
-  font-size: 18px;
-} */
 
 /* main a -- links */
 
-/* a {
-  color: #009688;
-} */
-
 a {
-  color: #004d40;
+  /* Light blue for links replaced with Teal */
+  color: #26A69A;
 }
 
-/* main blockqoute */
-
-/* blockquote {
-  border-left: 5px solid #795548;
-  color: #795548;
-  font-size: 125%;
-  font-weight: 400;
-  margin: 20px 0;
-  padding-left: 1.5rem;
-} */
+/* main blockquote */
 
 blockquote {
-  border-left: 5px solid #795548;
-  color: #795548;
+  /* Softer blue border replaced with Teal */
+  border-left: 5px solid #26A69A;
+  /* All text is Whitesmoke */
+  color: #F5F5F5;
   font-size: 125%;
   font-weight: 400;
   margin: 20px 0;
@@ -175,90 +172,55 @@ blockquote * {
 /* main nav */
 
 nav {
-  background: white;
+  /* Entire nav bar is dark blue */
+  background: #1A202C;
   box-shadow: none;
   height: 0;
 }
-
-/* nav {
-  background: rgb(149, 126, 212);
-  box-shadow: none;
-  height: 0;
-} */
 
 nav i {
   padding: 0 15px;
   position: relative;
   top: 5px;
+  /* Nav icons are now Teal */
+  color: #26A69A;
 }
 
-/* main */
-
-/* main {
-  background: url(../../assets/img/bg.png) repeat;
-  padding-left: 190px;
-} */
-
-main {
-  background: url(../../assets/img/bg.png) repeat;
-  padding-left: 190px;
-}
-
-dl {
-  margin-top: 0.5rem;
-}
-
-dd {
-  display: inline-block;
-  font-weight: 500;
-  margin-left: 0;
-}
-
-dt {
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-
+/* Ensure the side navigation panel itself has a dark blue background */
 ul.side-nav {
+  background-color: #1A202C;
   width: 190px;
+  /* Ensuring it's always on top and fixed */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
 }
 
 ul.side-nav li {
   padding: 0;
 }
 
-/* ul.side-nav.fixed a {
-  box-sizing: content-box;
-  color: rgb(48, 122, 207);
-  display: block;
-  line-height: 100%;
-  padding: 10px 0 12px;
-} */
-
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: rgb(16, 202, 56);
+  /* All text is Whitesmoke */
+  color: #F5F5F5;
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
 }
 
-ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
+ul.table-of-contents li.logo a.active,
+ul.table-of-contents li.logo a:hover {
   border: none;
   font-weight: 200;
 }
 
-/* ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
-  box-sizing: content-box;
-  min-height: 90px;
-  padding: 30px 30px 40px;
-} */
-
 ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
+  /* Entire nav bar is dark blue */
+  background-color: #1A202C;
+  /* Darker border */
+  border-bottom: 1px solid #424242;
   box-sizing: content-box;
   min-height: 90px;
   padding: 30px 30px 40px;
@@ -269,13 +231,18 @@ ul.side-nav.fixed li.logo a {
   line-height: 100%;
 }
 
-ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #fafafa;
-  border-left: 3px solid;
+ul.table-of-contents li:not(.logo) a.active,
+ul.table-of-contents li:not(.logo) a:hover {
+  /* Slightly lighter dark blue for hover */
+  background-color: #2C333D;
+  /* Bright blue border for active/hover replaced with Teal */
+  border-left: 3px solid #26A69A;
 }
 
-ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
-  color: #333 !important;
+ul.side-nav.fixed.table-of-contents li:not(.logo) a span,
+ul#slide-out li:not(.logo) a span {
+  /* All text is Whitesmoke */
+  color: #F5F5F5 !important;
 }
 
 li.logo span {
@@ -300,6 +267,8 @@ h3 {
   margin-top: 0;
   padding: 30px 40px;
   text-transform: uppercase;
+  /* All main section headings are Teal, added !important for force */
+  color: #26A69A !important;
 }
 
 .section {
@@ -312,43 +281,30 @@ h3 {
   height: 100vh;
 }
 
-/* Original */
-
-/* #intro.section {
-  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
-  position: relative;
-} */
-
 #intro.section {
-  background: #a7ffeb repeat;
+  /* Main dark blue background */
+  background-color: #1A202C;
   position: relative;
 }
 
 #intro.section .container {
-  color: white;
+  /* All text is Whitesmoke */
+  color: #F5F5F5;
   font-weight: 200;
   left: 0;
   position: absolute;
   top: 0;
 }
 
-/* #intro.section .container *:not(span) {
-  font-weight: 300;
-  line-height: 150%;
-  padding: 0 30px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-} */
-
 #intro.section .container *:not(span) {
   font-weight: 300;
-  /* font-weight: 400; */
   line-height: 150%;
-  /* padding: 0 0px; */
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 #intro.section .underline {
-  border-bottom: 5px solid #24305e;
+  /* Bright blue underline replaced with Teal */
+  border-bottom: 5px solid #26A69A;
 }
 
 #intro.section .teal {
@@ -365,13 +321,47 @@ h3 {
 }
 
 .waves-effect.waves-blue .waves-ripple {
-  /* The alpha value allows the text and background color
-   of the button to still show through. */
-  background-color: rgba(33, 150, 243, 0.2);
+  /* Blue waves effect replaced with Teal transparency */
+  background-color: rgba(38, 166, 154, 0.2);
+}
+
+main {
+  /* Ensuring main content respects flow and z-index below sidebar */
+  position: relative;
+  z-index: 1;
+  /* Main dark blue background */
+  background-color: #1A202C;
+  /* Added !important to ensure padding-left is applied */
+  padding-left: 190px !important;
 }
 
 .card {
   margin-bottom: 60px;
+  /* Card background slightly lighter than body - applies to ALL cards by default */
+  background-color: #2C333D;
+  /* Default text color for cards is Whitesmoke */
+  color: #F5F5F5;
+  /* Added: Smooth transition for hover effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  /* Changed: Increased lift effect on hover */
+  transform: translateY(-5px);
+  /* Changed: More prominent shadow on hover for depth */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Specific styling for cards within the Certificates section */
+#certificates .card {
+  background-color: #3A414C;
+  /* This is the 'light shade' for the outer certificate card */
+}
+
+/* Styling for cards *nested within* the Certificates cards */
+#certificates .card .card {
+  background-color: #2C333D;
+  /* This is the 'darker shade' for inner cards within certificates */
 }
 
 .card .role {
@@ -379,16 +369,21 @@ h3 {
   position: absolute;
   right: 38px;
   top: 35px;
+  /* Changed: Role text is now Teal, added !important */
+  color: #26A69A !important;
 }
 
 .card li a {
   margin-right: 0;
-  color: #333;
-  border-bottom: 2px solid #ffab40;
+  /* All card text is Whitesmoke unless specified */
+  color: #F5F5F5;
+  /* Light blue border replaced with Teal */
+  border-bottom: 2px solid #26A69A;
 }
 
 .card li a:hover {
-  color: #333;
+  /* Bright blue on hover replaced with Teal */
+  color: #26A69A;
   font-weight: 500;
 }
 
@@ -398,12 +393,16 @@ h3 {
 
 .card .card-content p {
   padding: 5px 0 0;
+  /* Changed: Paragraph text in cards is Whitesmoke, added !important for certainty */
+  color: #F5F5F5 !important;
 }
 
 .card h5 {
   font-size: 1.5rem;
   margin-bottom: -0.5rem;
   margin-top: 2rem;
+  /* Changed: Heading h5 in cards is now Teal */
+  color: #26A69A;
 }
 
 .card h6 {
@@ -411,10 +410,13 @@ h3 {
   letter-spacing: 1px;
   margin-top: 2rem;
   text-transform: uppercase;
+  /* Changed: Heading h6 in cards is now Teal */
+  color: #26A69A;
 }
 
 #experience .card-action {
-  background-color: rgba(0, 0, 0, 0.02);
+  /* Transparent dark blue for general cards action */
+  background-color: rgba(44, 51, 61, 0.1);
   border: none;
 }
 
@@ -428,7 +430,8 @@ h3 {
 
 .card-action span {
   font-size: 85%;
-  color: #666;
+  /* All text is Whitesmoke */
+  color: #F5F5F5;
 }
 
 .card ul {
@@ -439,15 +442,20 @@ h3 {
   line-height: 200%;
   list-style-type: disc;
   margin-left: 24px;
+  /* All text is Whitesmoke */
+  color: #F5F5F5;
 }
 
 .card ul li li {
-  color: #666;
+  /* All text is Whitesmoke */
+  color: #F5F5F5;
   font-size: 13px;
 }
 
 .card .card-title {
   font-size: 24px;
+  /* Changed: Main card titles are now Teal */
+  color: #26A69A;
 }
 
 .card .card-content .card-title {
@@ -466,14 +474,9 @@ a.hoverline {
   -webkit-transition: 0.25s all;
 }
 
-/* main a.hoverline */
-
-/* a.hoverline:hover {
-  border-bottom: 3px solid #24305e !important;
-} */
-
 a.hoverline:hover {
-  border-bottom: 3px solid #004d40 !important;
+  /* Bright blue hover line replaced with Teal */
+  border-bottom: 3px solid #26A69A !important;
 }
 
 #skills .card.large {
@@ -481,9 +484,12 @@ a.hoverline:hover {
 }
 
 #skills h4 {
-  border-bottom: 1px solid #ddd;
+  /* Darker border */
+  border-bottom: 1px solid #424242;
   margin-bottom: 30px;
   padding-bottom: 20px;
+  /* Heading h4 in Skills section is Teal, added !important for force */
+  color: #26A69A !important;
 }
 
 #skills .col img.responsive-img {
@@ -502,7 +508,8 @@ a.hoverline:hover {
 }
 
 #experience .card-content .row {
-  border-bottom: 1px solid #ddd;
+  /* Darker border */
+  border-bottom: 1px solid #424242;
   padding-bottom: 10px;
 }
 
@@ -543,28 +550,23 @@ small {
 }
 
 .grey-text {
-  color: #666 !important;
+  /* All text is Whitesmoke */
+  color: #F5F5F5 !important;
 }
 
 /* main .teal-text */
-
+/* This class is now explicitly for the Teal color for icons/accents */
 .teal-text {
-  color: #008073 !important;
+  /* Teal color */
+  color: #26A69A !important;
 }
-
-/* .teal-text {
-  color: #0b5e86 !important;
-} */
 
 /* .teal */
-
+/* This class is now explicitly for Teal background for accents */
 .teal {
-  background-color: #008073 !important;
+  /* Teal background */
+  background-color: #26A69A !important;
 }
-
-/* .teal {
-  background-color: #00695c !important;
-} */
 
 @media (min-width: 1200px) {
   #experience .container {
@@ -588,7 +590,7 @@ small {
 
 @media (max-width: 992px) {
   main {
-    padding-left: 0px;
+    /* The global padding-left: 190px !important; should now apply here as well. */
     padding-top: 64px;
   }
   ul.side-nav a {
@@ -597,12 +599,15 @@ small {
     width: 100%;
   }
   nav {
-    background: #fff;
+    /* Entire nav bar is dark blue */
+    background: #1A202C;
     height: 64px;
     position: absolute;
   }
-  nav a.button-collapse, nav a.button-collapse i {
-    color: #009688;
+  nav a.button-collapse,
+  nav a.button-collapse i {
+    /* All text is Whitesmoke */
+    color: #F5F5F5;
     height: 56px;
     line-height: 56px;
   }
@@ -626,20 +631,26 @@ small {
     text-align: center;
     width: 100%;
     position: absolute;
+    /* All text is Whitesmoke */
+    color: #F5F5F5;
   }
-  .name-title>span, .name-title>a {
+  .name-title>span,
+  .name-title>a {
     position: relative;
     line-height: 20px;
   }
   .name-title a {
     font-size: 22px;
     display: block;
+    /* All text is Whitesmoke */
+    color: #F5F5F5;
   }
   .name-title span {
     display: block;
     font-size: 14px;
   }
-  h3, .container {
+  h3,
+  .container {
     position: relative;
     top: 64px;
   }
@@ -658,6 +669,8 @@ small {
     font-size: 22px;
     line-height: 200%;
     margin: 30px 0 0;
+    /* All text is Whitesmoke */
+    color: #F5F5F5;
   }
   #intro.section .container *:not(span) {
     padding: 0;
@@ -692,4 +705,3 @@ small {
     background-position-x: 30%;
   }
 }
-
